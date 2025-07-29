@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class ForTasks {
     public static void main(String[] args) {
         // Печать чисел, которые делятся на 3
-        // printNumbersDivisibleBy3();
+        printNumbersDivisibleBy3();
 
         // Сумма чисел от 1 до N
-        // sumNumbers();
+        sumNumbers();
 
         // Печать таблицы умножения для числа
-        // printMultiplyTables();
+        printMultiplyTables();
 
         // Проверка на простое число
-        // checkNumberSimple();
+        checkNumberSimple();
 
         // Печать чисел от 1 до 10
         printNumbers();

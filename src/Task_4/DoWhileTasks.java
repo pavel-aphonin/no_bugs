@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class DoWhileTasks {
     public static void main(String[] args) {
         // Ожидание целого числа
-        // askPositiveNumber();
+        askPositiveNumber();
 
         // Проверка пароля
-        // checkPassword();
+        checkPassword();
 
         // Вывод чисел от 1 до 10
-        // printNumbersFrom1To10();
+        printNumbersFrom1To10();
 
         // Ожидание команды "exit"
-        // askExitCommand();
+        askExitCommand();
 
         // Счётчик цифр в числе
         countNumbers();

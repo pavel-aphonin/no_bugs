@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class WhileTasks {
     public static void main(String[] args) {
         // Расчёт факториала
-        // printFactorial();
+        printFactorial();
 
         // Вывод всех чётных чисел до выбранного числа
-        // printEvenNumbers();
+        printEvenNumbers();
 
         // Обратный отчёт
         countdown();
