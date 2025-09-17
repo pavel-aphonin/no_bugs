@@ -1,15 +1,17 @@
 package Task_6;
 
-import Task_6.Subtask_2.Cat;
-import Task_6.Subtask_2.Dog;
-import Task_6.Subtask_2.Owner;
-import Task_6.Subtask_3.Dish;
-import Task_6.Subtask_3.Drink;
-import Task_6.Subtask_3.HotDish;
-import Task_6.Subtask_3.Meny;
-import Task_6.Subtask_4.Aquarium;
-import Task_6.Subtask_4.Shark;
-import Task_6.Subtask_4.Starfish;
+import Task_6.Subtask_5.Chicken;
+import Task_6.Subtask_5.Cow;
+import Task_6.Subtask_5.Ferm;
+import Task_6.Subtask_6.Cactus;
+import Task_6.Subtask_6.Garden;
+import Task_6.Subtask_6.Orchid;
+import Task_6.Subtask_7.Carousel;
+import Task_6.Subtask_7.Park;
+import Task_6.Subtask_7.RollerCoaster;
+import Task_6.Subtask_8.Manuscript;
+import Task_6.Subtask_8.Museum;
+import Task_6.Subtask_8.Sculpture;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,14 +45,60 @@ public class Main {
 //        meny.show(soup);
 //        meny.show(juice);
 
-        Aquarium aquarium = new Aquarium();
-        Shark shark = new Shark("Акула", "быстро и агрессивно");
-        Starfish starfish = new Starfish("Морская звезда", "медленно");
+//        Aquarium aquarium = new Aquarium();
+//        Shark shark = new Shark("Акула", "быстро и агрессивно");
+//        Starfish starfish = new Starfish("Морская звезда", "медленно");
+//
+//        aquarium.add(shark);
+//        aquarium.add(starfish);
+//
+//        aquarium.show(shark);
+//        aquarium.show(starfish);
 
-        aquarium.add(shark);
-        aquarium.add(starfish);
+//        Ferm ferm = new Ferm();
+//        Cow cow = new Cow("Корова");
+//        Chicken chicken = new Chicken("Курица");
+//
+//        ferm.add(cow);
+//        ferm.add(chicken);
+//
+//        ferm.control(cow);
+//        ferm.control(chicken);
 
-        aquarium.show(shark);
-        aquarium.show(starfish);
+//        Garden garden = new Garden();
+//        Orchid orchid = new Orchid("Орхидея", "много", "частый");
+//        Cactus cactus = new Cactus("Кактус", "мало", "редкий");
+//
+//        garden.add(orchid);
+//        garden.add(cactus);
+//
+//        garden.getCare(orchid);
+//        garden.getCare(cactus);
+
+//        Park park = new Park();
+//        RollerCoaster rollerCoaster = new RollerCoaster("Американские горки");
+//        Carousel carousel = new Carousel("Карусель");
+//
+//        park.add(rollerCoaster);
+//        park.add(carousel);
+//
+//        park.control(rollerCoaster);
+//        park.control(carousel);
+//
+//        park.getInfo(rollerCoaster);
+//        park.getInfo(carousel);
+
+        Museum museum = new Museum();
+        Sculpture sculpture = new Sculpture("Скульптура", 25, 50, "История скульптуры");
+        Manuscript manuscript = new Manuscript("Древний манускрипт", 15, 20, "История древнего манускрипта");
+
+        museum.add(sculpture);
+        museum.add(manuscript);
+
+        museum.getInformation(sculpture);
+        museum.getInformation(manuscript);
+
+        museum.service(sculpture);
+        museum.service(manuscript);
     }
 }
