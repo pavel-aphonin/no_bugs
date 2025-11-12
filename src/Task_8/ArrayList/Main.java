@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public class Main {
     public static void main(String[] args) {
-        Collection<Integer> taskIntData = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
+        Collection<Integer> taskIntData = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
         NumbersStorage taskIntStorage = new NumbersStorage(taskIntData);
 
         // Выводим данные после создания (задача 1)
@@ -19,7 +19,7 @@ public class Main {
         // Ищем все чётные числа (задача 2)
         taskIntStorage.findEvenNumbers();
 
-        Collection<String> taskStringData = new ArrayList<String>(Arrays.asList(
+        Collection<String> taskStringData = new ArrayList<>(Arrays.asList(
                 "Это первая строка",
                 "Это вторая строка",
                 "Это третья строка",
