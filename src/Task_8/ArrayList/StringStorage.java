@@ -7,16 +7,16 @@ public class StringStorage {
 
     public StringStorage(Collection<String> data) {
         this.storage = data;
-        this.longestString = "";
     }
 
     public void findLongestString() {
+        longestString = "";
         storage.forEach(element -> {
-            if (element.length() > this.longestString.length()) {
-                this.longestString = element;
+            if (element.length() > longestString.length()) {
+                longestString = element;
             }
         });
 
-        System.out.println(this.longestString);
+        System.out.println(longestString);
     }
 }

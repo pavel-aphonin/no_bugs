@@ -11,8 +11,6 @@ public class NumbersStorage {
     public NumbersStorage(Collection<Integer> data) {
         this.storage = data;
         this.evenNumbers = new ArrayList<>();
-        this.sum = 0;
-        this.maxNumber = 0;
     }
 
     public void addElement(Integer element) {
@@ -24,34 +22,41 @@ public class NumbersStorage {
     }
 
     public void findEvenNumbers() {
+        evenNumbers.clear();
         storage.forEach(
                 element -> {
-                    if (element % 2 == 0) evenNumbers.add(element);
-                }
-        );
-
-        System.out.println(this.evenNumbers);
-    }
-
-    public void sumAllElements() {
-        storage.forEach(
-                element -> {
-                    this.sum += element;
-                }
-        );
-
-        System.out.println(this.sum);
-    }
-
-    public void findMaxNumber() {
-        this.storage.forEach(
-                element -> {
-                    if (element > this.maxNumber) {
-                        this.maxNumber = element;
+                    if (element % 2 == 0) {
+                        evenNumbers.add(element);
                     }
                 }
         );
 
-        System.out.println(this.maxNumber);
+        System.out.println(evenNumbers);
+    }
+
+    public void sumAllElements() {
+        sum = 0;
+        storage.forEach(
+                element -> {
+                    sum += element;
+                }
+        );
+
+        System.out.println(sum);
+    }
+
+    public void findMaxNumber() {
+        Iterator<Integer> iterator = storage.iterator();
+        maxNumber = iterator.next();
+
+        storage.forEach(
+                element -> {
+                    if (element > maxNumber) {
+                        maxNumber = element;
+                    }
+                }
+        );
+
+        System.out.println(maxNumber);
     }
 }
