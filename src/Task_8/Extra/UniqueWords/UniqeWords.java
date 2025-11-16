@@ -24,10 +24,12 @@ public class UniqeWords {
         String[] words = text
                 .trim()
                 .toLowerCase()
-//                .replaceAll("[^a-zA-Z0-9\\s]", " ")
-                .split(" ");
+                .replaceAll("[^\\p{L}\\p{N}\\s]", " ")
+                .split("\\s+");
 
-        storage.addAll(List.of(words));
+        if (words.length > 0 && !words[0].isEmpty()) {
+            storage.addAll(List.of(words));
+        }
     }
 
     public void calculateUniqueWordsCount() {
