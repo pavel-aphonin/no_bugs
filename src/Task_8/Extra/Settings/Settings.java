@@ -25,6 +25,6 @@ public class Settings {
     }
 
     public void resetSettingsToDefault() {
-        settings = defaultSettings;
+        settings = new HashMap<>(defaultSettings);
     }
 }
