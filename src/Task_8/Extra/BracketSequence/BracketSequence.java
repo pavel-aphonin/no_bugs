@@ -27,35 +27,41 @@ public class BracketSequence {
     }
 
     public Boolean checkBracketSequence() {
-        if (bracketSequence.isEmpty()) {
-            System.out.println("Не обнаружено скобочной последовательности");
+        if (bracketSequence == null || bracketSequence.isEmpty()) {
+            System.out.println("Скобочная последовательность пуста (считается корректной)");
             return true;
         }
 
         for (int i = 0; i < bracketSequence.length(); i += 1) {
             char ch = bracketSequence.charAt(i);
+
             if (bracketsPair.containsValue(ch)) {
                 sequence.push(ch);
-            } else {
+            }
+            else if (bracketsPair.containsKey(ch)) {
                 if (sequence.isEmpty()) {
-                    System.out.println("Скобочная последовательность некорректна");
+                    System.out.println("Скобочная последовательность некорректна: нет соответствующей открывающей скобки");
                     return false;
                 }
                 char actualBracket = sequence.pop();
                 char expectedBracket = bracketsPair.get(ch);
 
-                if (actualBracket == expectedBracket) {
-                    continue;
+                if (actualBracket != expectedBracket) {
+                    System.out.println("Скобочная последовательность некорректна: несовпадение типов скобок");
+                    return false;
                 }
-
-                System.out.println("Скобочная последовательность некорректна");
-                return false;
             }
         }
 
-        System.out.println("Скобочная последовательность корректна");
-        return true;
+        if (sequence.isEmpty()) {
+            System.out.println("Скобочная последовательность корректна");
+            return true;
+        } else {
+            System.out.println("Скобочная последовательность некорректна: остались незакрытые скобки");
+            return false;
+        }
     }
+
 
     public void clearBracketSequence() {
         sequence.clear();
