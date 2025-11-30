@@ -3,9 +3,9 @@ package Task_8.LinkedList;
 import java.util.*;
 
 public class StringStorage {
-    private final List<String> storage;
+    private final LinkedList<String> storage;
 
-    public StringStorage(List<String> storage) {
+    public StringStorage(LinkedList<String> storage) {
         this.storage = storage;
     }
 

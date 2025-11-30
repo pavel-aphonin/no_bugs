@@ -1,10 +1,9 @@
 package Task_8.Extra.Tasks;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class Tasks {
-    private final List<String> tasks;
+    private final LinkedList<String> tasks;
 
     public Tasks() {
         this.tasks = new LinkedList<>();

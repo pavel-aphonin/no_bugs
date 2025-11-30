@@ -34,7 +34,7 @@ public class Main {
         taskQueueStorage.processTask("Задача 3");
         taskQueueStorage.print();
 
-        List<String> taskStringData = new LinkedList<>(Arrays.asList(
+        LinkedList<String> taskStringData = new LinkedList<>(Arrays.asList(
                 "Первая строка",
                 "Вторая строка",
                 "Третья строка",
